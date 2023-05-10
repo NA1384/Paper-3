@@ -1,0 +1,230 @@
+\documentclass[11pt,addpoints,answers]{exam}
+\usepackage{amsfonts,amssymb,amsmath, amsthm}
+\usepackage{graphicx}
+\usepackage{systeme}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepgfplotslibrary{fillbetween}
+\usepackage{mathrsfs}
+\usepackage{marginnote}
+\usetikzlibrary{arrows}
+\usetikzlibrary{calc}
+
+
+\pagestyle{headandfoot}
+
+\firstpageheader{Date: \underline{\hspace{2.5in}}}{}{Name: \underline{\hspace{2.5in}}}
+%\firstpageheadrule
+
+\runningheader{Higher Level Mathematics Analysis \& Approaches}{}{Page \thepage\ of \numpages}
+\runningheadrule
+
+\firstpagefooter{}{}{}
+\runningfooter{}{}{}
+
+
+\begin{document}
+
+\begin{center}
+
+
+
+
+
+\fbox{\fbox{\parbox{6in}{
+
+This markscheme is confidential and for the exclusive use of examiners in this examination session.
+It is the property of Upper Canada College and must not be reproduced or distributed to any other person without the authorization of Mr. Damion Walker.xw
+
+}}}
+
+
+\vspace{3cm}
+
+\includegraphics{logo.png}
+
+\end{center}
+
+\vspace{2cm}
+
+\begin{questions} %------------------------------------------
+ 
+\fullwidth{
+Answer all questions in the area provided. Full marks are not necessarily awarded for a correct answer with no working. Answers must be supported by working and/or explanations. Solutions found from a graphic display calculator should be supported by suitable working. For example, if graphs are used to find a solution, you should sketch these as part of your answer. Where an answer is incorrect, some marks may be given for a correct method, provided this is shown by written working. You are therefore advised to show all working.}
+
+\newpage %---------------------------------------------------
+
+\question \label{DisplayModeExample}
+
+[Maximum Mark: \numpoints]
+\newline
+\newline
+\textbf{In this question you will explore the convergence of infinite sequences and the mathematical test for determining if a specific sequence converges.}
+\\
+\begin{parts}
+
+\part[1] Calculate the first 5 terms of the infinite sequence:
+
+\[e^{-n}, {n \in \mathbb{N}} \]
+
+\begin{solutionordottedlines}[2cm]
+\marginnote{A1}
+Using a GDC: 0.368, 0.135, 0.0498, 0.018, 0.00674.
+\end{solutionordottedlines} 
+\vspace{0.5cm}
+\part[1] Hence, state what value the sequence approaches as \emph{n} approaches infinity:
+
+\begin{solutionordottedlines}[1.5cm]
+\marginnote{A1} The sequence approaches 0.
+\end{solutionordottedlines} 
+\vspace{0.5cm}
+\part[2] By taking the limit of the sequence to infinity, support the conclusion deduced above and state whether the sequence converges or diverges.
+
+\begin{solutionordottedlines}[7cm]
+\[=\lim_{n\to\infty}{e^{-n}}\]
+\marginnote{M1}
+\[=\frac{\lim_{n\to\infty}{1}}{\lim_{n\to\infty}e^{n}}\]
+
+Substituting \emph{n} for infinity provides:
+\\
+\[=\frac{1}{\infty}\]
+
+\[=0\]
+
+\marginnote{AG}
+Therefore, the sequence converges at 0.
+\end{solutionordottedlines}
+\vspace{0.5cm}
+\part[1] Calculate the first 5 terms of the infinite sequence:
+\[e^{n}, {n \in \mathbb{N}} \]
+\begin{solutionordottedlines}[2cm]
+\marginnote{A1}
+Using a GDC: 2.72, 7.39, 20.1, 54.6, 148.
+\end{solutionordottedlines}
+\vspace{0.5cm}
+\part[1] Hence, state what value the sequence approaches as \emph{n} approaches infinity:
+
+\begin{solutionordottedlines}[1.5cm]
+\marginnote{A1} The sequence approaches infinity.
+\end{solutionordottedlines} 
+\vspace{0.5cm}
+\part[1] By taking the limit of the sequence to infinity, support the conclusion deduced above and state whether the sequence converges or diverges.
+
+\begin{solutionordottedlines}[7cm]
+\[=\lim_{n\to\infty}{e^{n}}\]
+\marginnote{M1}
+Substituting \emph{x} for infinity provides:
+\marginnote{M1}
+\[=\infty\]
+\marginnote{AG}
+Therefore, the sequence diverges.
+\end{solutionordottedlines}
+\vspace{0.5cm}
+\part[1] Calculate the first 5 terms of the infinite sequence:
+\[\frac{n+1}{2n^2}, {n \in \mathbb{N}} \]
+\begin{solutionordottedlines}[2cm]
+\marginnote{A1}
+Using a GDC: 1, 0.375, 0.222, 0.156, 0.12.
+\end{solutionordottedlines}
+\vspace{0.5cm}
+\part[1] Hence, state what value the sequence approaches as \emph{n} approaches infinity:
+
+\begin{solutionordottedlines}[1.5cm]
+\marginnote{A1} The sequence approaches 0.
+\end{solutionordottedlines} 
+\vspace{0.5cm}
+\part[2] By taking the limit of the sequence to infinity, support the conclusion deduced above and state whether the sequence converges or diverges.
+
+\begin{solutionordottedlines}[7cm]
+\[=\lim_{n\to\infty}\frac{n+1}{2n^2}\]
+\marginnote{M1}
+\[=\frac{1}{2}*(\lim_{n\to\infty}\frac{1}{n}+\lim_{n\to\infty}\frac{1}{n^{2}})\]
+\marginnote{M1}
+Substituting \emph{n} for infinity provides:
+\\
+\[=\frac{1}{2}*(0+0)\]
+
+\[=0\]
+\marginnote{AG}
+Therefore, the sequence converges.
+\end{solutionordottedlines}
+\vspace{0.5cm}
+\part[1] Calculate the first 5 terms of the infinite sequence:
+\[\frac{2n}{\ln(n+1)}, {n \in \mathbb{N}} \]
+\begin{solutionordottedlines}
+\marginnote{A1}
+Using a GDC: 2.89, 3.64, 4.33, 4.97, 5.58.
+\end{solutionordottedlines}
+\vspace{0.5cm}
+\part[1] Hence, state what value the sequence approaches as \emph{n} approaches infinity:
+
+\begin{solutionordottedlines}[1.5cm]
+\marginnote{A1} The sequence approaches infinity.
+\end{solutionordottedlines} 
+\vspace{0.5cm}
+\part[2] By taking the limit of the sequence to infinity, support the conclusion deduced above and state whether the sequence converges or diverges.
+
+\begin{solutionordottedlines}[7cm]
+\[=\lim_{n\to\infty}\frac{2n}{\ln(n+1)}\]
+\marginnote{M1}
+Using L'Hôpital's rule:
+\[=2*(\lim_{n\to\infty}\frac{1}{\frac{1}{n+1}})\]
+\marginnote{M1}
+\[=2*\lim_{n\to\infty}(n+1)\]
+\\
+Substituting \emph{n} for infinity provides:
+\\
+\[=2*\infty\]
+\[=\infty\]
+\marginnote{AG}
+Therefore, the sequence diverges.
+\end{solutionordottedlines}
+\vspace{0.5cm}
+\part[8] For a positive infinite sequence $\displaystyle a_{n}$, the ratio test for convergence is defined by calculating $\displaystyle L = \lim_{n\to\infty}\frac{a_{n+1}}{a_{n}}$. Hence, calculate \emph{L} for the sequences previously investigated.
+
+\begin{solutionordottedlines}[10cm]
+\\
+\[L_{1} = \lim_{n\to\infty}\frac{e^{-(n+1)}}{e^{-n}}\]
+\marginnote{M1}
+\[L_{1} = \frac{\lim_{n\to\infty}{e^{-(n+1)}}}{\lim_{n\to\infty}e^{-n}}\]
+\\
+\[L_{1} = \frac{\lim_{n\to\infty}{e^{-(n+1)}}}{\lim_{n\to\infty}e^{-n}}\]
+
+\marginnote{A1}
+\[L_{1}=\]
+\marginnote{M1}
+
+\marginnote{A1}
+\[L_{2}=\]
+\marginnote{M1}
+
+\marginnote{A1}
+\[L_{3}=\]
+\marginnote{M1}
+
+\marginnote{A1}
+\[L_{4}=\]
+\end{solutionordottedlines} 
+\vspace{0.5cm}
+
+\part[3] Hence, state the possible conclusions that can be deduced from the results of a ratio test and the possible values of \emph{L}.
+\begin{solutionordottedlines}[4cm]
+\vspace{0.25cm}
+\newline
+\marginnote{A1}
+If $L < 1$, the sequence converges.
+\newline
+\marginnote{A1}
+If $L > 1$, the sequence diverges.
+\newline
+\marginnote{A1}
+If $L = 1$ or undefined, the ratio test is inconclusive.
+\end{solutionordottedlines}
+
+
+\end{parts}
+
+
+\end{questions}
+
+\end{document}
