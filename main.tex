@@ -1,7 +1,6 @@
 \documentclass[11pt,addpoints,answers]{exam}
-\usepackage{amsfonts,amssymb,amsmath, amsthm}
-\usepackage{graphicx}
-\usepackage{systeme}
+\usepackage{amsfonts,amssymb,amsmath,amsthm}
+\usepackage[hidelinks]{hyperref}
 \usepackage{pgf,tikz,pgfplots}
 \pgfplotsset{compat=1.15}
 \usepgfplotslibrary{fillbetween}
@@ -22,209 +21,164 @@
 \firstpagefooter{}{}{}
 \runningfooter{}{}{}
 
-
 \begin{document}
 
-\begin{center}
+    \begin{center}
 
+        \fbox{\fbox{\parbox{6in}{
 
+        This markscheme is confidential and for the exclusive use of examiners in this examination session.
+        It is the property of Upper Canada College and must not be reproduced or distributed to any other person without the authorization of Mr. Damion Walker.xw
 
+        }}}
 
+        \vspace{3cm}
 
-\fbox{\fbox{\parbox{6in}{
+        \includegraphics{logo.png}
 
-This markscheme is confidential and for the exclusive use of examiners in this examination session.
-It is the property of Upper Canada College and must not be reproduced or distributed to any other person without the authorization of Mr. Damion Walker.xw
+    \end{center}
 
-}}}
+    \vspace{2cm}
 
+    \begin{questions} %------------------------------------------
+    
+        \fullwidth{
+        Answer all questions in the area provided. Full marks are not necessarily awarded for a correct answer with no working. Answers must be supported by working and/or explanations. Solutions found from a graphic display calculator should be supported by suitable working. For example, if graphs are used to find a solution, you should sketch these as part of your answer. Where an answer is incorrect, some marks may be given for a correct method, provided this is shown by written working. You are therefore advised to show all working.}
 
-\vspace{3cm}
+        \newpage %---------------------------------------------------
 
-\includegraphics{logo.png}
+        \question \label{DisplayModeExample}
 
-\end{center}
+        [Maximum Mark: \numpoints]
+        \newline
+        \newline
+        \textbf{In this question you will explore the convergence of infinite sequences and a mathematical test for determining if a specific sequence converges.}
 
-\vspace{2cm}
+        \begin{parts}
+            \begin{EnvUplevel}
+                Consider the following sequence:
+                \[
+                    \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \dots
+                \]
+            \end{EnvUplevel}
+            
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{questions} %------------------------------------------
- 
-\fullwidth{
-Answer all questions in the area provided. Full marks are not necessarily awarded for a correct answer with no working. Answers must be supported by working and/or explanations. Solutions found from a graphic display calculator should be supported by suitable working. For example, if graphs are used to find a solution, you should sketch these as part of your answer. Where an answer is incorrect, some marks may be given for a correct method, provided this is shown by written working. You are therefore advised to show all working.}
+            \part[1] Find the common ratio between consecutive terms of the sequence.
 
-\newpage %---------------------------------------------------
+            \begin{solutionordottedlines}[3em]
+                The common ratio is $\frac{1}{2}$, or 0.5
+                \marginnote{A1}
+            \end{solutionordottedlines}
+            \vspace{1em}
 
-\question \label{DisplayModeExample}
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-[Maximum Mark: \numpoints]
-\newline
-\newline
-\textbf{In this question you will explore the convergence of infinite sequences and the mathematical test for determining if a specific sequence converges.}
-\\
-\begin{parts}
+            \part[1] Hence, find the 4\textsuperscript{th} and 5\textsuperscript{th} terms of the sequence.
 
-\part[1] Calculate the first 5 terms of the infinite sequence:
+            \begin{solutionordottedlines}[3em]
+                The fourth and fifth terms of the sequence are $\frac{1}{16}$ and $\frac{1}{32}$, respectively.
+                \marginnote{A1}
+            \end{solutionordottedlines} 
+            \vspace{1em}
 
-\[e^{-n}, {n \in \mathbb{N}} \]
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{solutionordottedlines}[2cm]
-\marginnote{A1}
-Using a GDC: 0.368, 0.135, 0.0498, 0.018, 0.00674.
-\end{solutionordottedlines} 
-\vspace{0.5cm}
-\part[1] Hence, state what value the sequence approaches as \emph{n} approaches infinity:
+            \part[1] Hence, state whether the sequence converges (i.e. approaches a finite value) or diverges (i.e. tends to infinity).
 
-\begin{solutionordottedlines}[1.5cm]
-\marginnote{A1} The sequence approaches 0.
-\end{solutionordottedlines} 
-\vspace{0.5cm}
-\part[2] By taking the limit of the sequence to infinity, support the conclusion deduced above and state whether the sequence converges or diverges.
+            \begin{solutionordottedlines}[3em]
+                The sequence converges.
+                \marginnote{A1}
+            \end{solutionordottedlines}
+            \vspace{1em}
 
-\begin{solutionordottedlines}[7cm]
-\[=\lim_{n\to\infty}{e^{-n}}\]
-\marginnote{M1}
-\[=\frac{\lim_{n\to\infty}{1}}{\lim_{n\to\infty}e^{n}}\]
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Substituting \emph{n} for infinity provides:
-\\
-\[=\frac{1}{\infty}\]
+            \part[1] Hence, state a general formula for the $k$\textsuperscript{th} element of the sequence.
 
-\[=0\]
+            \begin{solutionordottedlines}[3em]
+                One possible formula is
+                \[
+                    T_k = \left(\frac{1}{2}\right)^{k}
+                    \marginnote{A1}
+                \]
+            \end{solutionordottedlines}
+            \vspace{1em}
 
-\marginnote{AG}
-Therefore, the sequence converges at 0.
-\end{solutionordottedlines}
-\vspace{0.5cm}
-\part[1] Calculate the first 5 terms of the infinite sequence:
-\[e^{n}, {n \in \mathbb{N}} \]
-\begin{solutionordottedlines}[2cm]
-\marginnote{A1}
-Using a GDC: 2.72, 7.39, 20.1, 54.6, 148.
-\end{solutionordottedlines}
-\vspace{0.5cm}
-\part[1] Hence, state what value the sequence approaches as \emph{n} approaches infinity:
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{solutionordottedlines}[1.5cm]
-\marginnote{A1} The sequence approaches infinity.
-\end{solutionordottedlines} 
-\vspace{0.5cm}
-\part[1] By taking the limit of the sequence to infinity, support the conclusion deduced above and state whether the sequence converges or diverges.
+            \part[1] Find a general formula for the following sequence:
+            \[
+                1, 2, 4, 8\dots
+            \]
 
-\begin{solutionordottedlines}[7cm]
-\[=\lim_{n\to\infty}{e^{n}}\]
-\marginnote{M1}
-Substituting \emph{x} for infinity provides:
-\marginnote{M1}
-\[=\infty\]
-\marginnote{AG}
-Therefore, the sequence diverges.
-\end{solutionordottedlines}
-\vspace{0.5cm}
-\part[1] Calculate the first 5 terms of the infinite sequence:
-\[\frac{n+1}{2n^2}, {n \in \mathbb{N}} \]
-\begin{solutionordottedlines}[2cm]
-\marginnote{A1}
-Using a GDC: 1, 0.375, 0.222, 0.156, 0.12.
-\end{solutionordottedlines}
-\vspace{0.5cm}
-\part[1] Hence, state what value the sequence approaches as \emph{n} approaches infinity:
+            \begin{solutionordottedlines}[3em]
+                One possible formula is
+                \[
+                    T_k = 2^{k - 1}
+                    \marginnote{A1}
+                \]
+            \end{solutionordottedlines}
+            \vspace{1em}
 
-\begin{solutionordottedlines}[1.5cm]
-\marginnote{A1} The sequence approaches 0.
-\end{solutionordottedlines} 
-\vspace{0.5cm}
-\part[2] By taking the limit of the sequence to infinity, support the conclusion deduced above and state whether the sequence converges or diverges.
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            
+            \newpage
+            \part[1] Hence, state whether the sequence converges or diverges.
 
-\begin{solutionordottedlines}[7cm]
-\[=\lim_{n\to\infty}\frac{n+1}{2n^2}\]
-\marginnote{M1}
-\[=\frac{1}{2}*(\lim_{n\to\infty}\frac{1}{n}+\lim_{n\to\infty}\frac{1}{n^{2}})\]
-\marginnote{M1}
-Substituting \emph{n} for infinity provides:
-\\
-\[=\frac{1}{2}*(0+0)\]
+            \begin{solutionordottedlines}[3em]
+                The sequence diverges.
+                \marginnote{A1}
+            \end{solutionordottedlines} 
+            \vspace{1em}
 
-\[=0\]
-\marginnote{AG}
-Therefore, the sequence converges.
-\end{solutionordottedlines}
-\vspace{0.5cm}
-\part[1] Calculate the first 5 terms of the infinite sequence:
-\[\frac{2n}{\ln(n+1)}, {n \in \mathbb{N}} \]
-\begin{solutionordottedlines}
-\marginnote{A1}
-Using a GDC: 2.89, 3.64, 4.33, 4.97, 5.58.
-\end{solutionordottedlines}
-\vspace{0.5cm}
-\part[1] Hence, state what value the sequence approaches as \emph{n} approaches infinity:
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{solutionordottedlines}[1.5cm]
-\marginnote{A1} The sequence approaches infinity.
-\end{solutionordottedlines} 
-\vspace{0.5cm}
-\part[2] By taking the limit of the sequence to infinity, support the conclusion deduced above and state whether the sequence converges or diverges.
+            \part[1] Calculate the ratio between consecutive terms for terms 1 to 5 in the following sequence in decimal:
+            \[
+                1, 4, 9, 16\dots
+            \]
+            where $T_k = k^{2}$
 
-\begin{solutionordottedlines}[7cm]
-\[=\lim_{n\to\infty}\frac{2n}{\ln(n+1)}\]
-\marginnote{M1}
-Using L'Hôpital's rule:
-\[=2*(\lim_{n\to\infty}\frac{1}{\frac{1}{n+1}})\]
-\marginnote{M1}
-\[=2*\lim_{n\to\infty}(n+1)\]
-\\
-Substituting \emph{n} for infinity provides:
-\\
-\[=2*\infty\]
-\[=\infty\]
-\marginnote{AG}
-Therefore, the sequence diverges.
-\end{solutionordottedlines}
-\vspace{0.5cm}
-\part[8] For a positive infinite sequence $\displaystyle a_{n}$, the ratio test for convergence is defined by calculating $\displaystyle L = \lim_{n\to\infty}\frac{a_{n+1}}{a_{n}}$. Hence, calculate \emph{L} for the sequences previously investigated.
+            \begin{solutionordottedlines}[5em]
+                The ratios are as follows:
+                \[
+                    4, 2.25, 1.777\dots, 1.5625
+                    \marginnote{A1}
+                \]
+            \end{solutionordottedlines}
+            \vspace{1em}
 
-\begin{solutionordottedlines}[10cm]
-\\
-\[L_{1} = \lim_{n\to\infty}\frac{e^{-(n+1)}}{e^{-n}}\]
-\marginnote{M1}
-\[L_{1} = \frac{\lim_{n\to\infty}{e^{-(n+1)}}}{\lim_{n\to\infty}e^{-n}}\]
-\\
-\[L_{1} = \frac{\lim_{n\to\infty}{e^{-(n+1)}}}{\lim_{n\to\infty}e^{-n}}\]
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\marginnote{A1}
-\[L_{1}=\]
-\marginnote{M1}
+            \part[2] Show that the equation $y = \frac{(x + 1)^{2}}{x^{2}}$ has a horizontal asymptote at $y = 1$
 
-\marginnote{A1}
-\[L_{2}=\]
-\marginnote{M1}
+            \begin{solutionordottedlines}[13em]
+                \begin{align}
+                    y &= \frac{(x + 1)^{2}}{x^{2}} \\
+                    &= \frac{x^{2} + 2x + 1}{x^{2}} \\
+                    &= 1 + \frac{2}{x} + \frac{1}{x^{2}}
+                    \marginnote{M1}
+                \end{align}
+                Since $\frac{2}{x}$ and $\frac{1}{x^{2}}$ both have asymptotes at $y = 0$, then $1 + \frac{2}{x} + \frac{1}{x^{2}}$ has an asymptote at
+                $y = 1$.
+                \marginnote{R1}
+            \end{solutionordottedlines}
+            \vspace{1em}
 
-\marginnote{A1}
-\[L_{3}=\]
-\marginnote{M1}
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\marginnote{A1}
-\[L_{4}=\]
-\end{solutionordottedlines} 
-\vspace{0.5cm}
+            \part[1] Hence, state what the ratio between terms approaches in the sequence in \hyperref[part@1@7]{(g)}
 
-\part[3] Hence, state the possible conclusions that can be deduced from the results of a ratio test and the possible values of \emph{L}.
-\begin{solutionordottedlines}[4cm]
-\vspace{0.25cm}
-\newline
-\marginnote{A1}
-If $L < 1$, the sequence converges.
-\newline
-\marginnote{A1}
-If $L > 1$, the sequence diverges.
-\newline
-\marginnote{A1}
-If $L = 1$ or undefined, the ratio test is inconclusive.
-\end{solutionordottedlines}
+            \begin{solutionordottedlines}[1.5cm]
+                \marginnote{A1} The ratio between terms approaches 1.
+            \end{solutionordottedlines}
+            \vspace{1em}
 
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            
+        \end{parts}
 
-\end{parts}
-
-
-\end{questions}
+    \end{questions}
 
 \end{document}
